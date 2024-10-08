@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="icon" type="image/x-icon" href="./Cloudy-clear at times.svg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom right, rgb(123, 184, 104), rgb(13, 87, 10));
+      font-size: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      color: rgb(255, 255, 255);
+      transition: background 0.5s ease;
+    }
+
+    .container {
+      height: 25rem;
+      width: 18rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      text-align: center;
+      padding-top: 12px;
+      border-radius: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      animation: fadeInUp 1s ease;
+    }
+
+    .temp {
+      font-size: 4rem;
+      margin: 10px 0;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .summary {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+    }
+
+    .location {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .icon img {
+      height: 8rem;
+      animation: bounceIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0%, 100% {
+        transform: scale(0.9);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="icon">---</div>
+    <div class="temp">-°C</div>
+    <div class="summary">----</div>
+    <div class="location"></div>
+  </div>
+
+  <!-- Linking the JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
